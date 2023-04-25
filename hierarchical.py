@@ -8,13 +8,17 @@ import numpy as np
 
 np.random.seed(1234)
 
-st.title("Harshit")
+st.title("Hierarchical Clustering")
+
+st.write("Create a slider for each step in hierarchical clustering of unsupervised data. Use the sklearn.datasets make_blobs function to create the dataset and visualize the predictions using a changing voronoi diagram.")
 
 number = st.sidebar.number_input("Number of points", min_value=0, max_value=50, value=10)
 features, _clusters = make_blobs(n_samples = number, n_features = 2, centers = 3, cluster_std = 1.3, shuffle = True)
 
 
 step = st.sidebar.slider("Hierarchical step", min_value=3, max_value=number)
+
+st.sidebar.write("Created by : Harshit Ramolia and Varun Barala")
 
 hierarchical_cluster = AgglomerativeClustering(n_clusters=step , affinity='euclidean', linkage='ward')
 labels = hierarchical_cluster.fit_predict(features)
