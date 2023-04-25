@@ -4,7 +4,6 @@ from sklearn.cluster import AgglomerativeClustering
 from scipy.spatial import Voronoi, voronoi_plot_2d
 from sklearn.neighbors import NearestCentroid
 import matplotlib.pyplot as plt
-import pandas as pd
 import numpy as np
 
 np.random.seed(1234)
