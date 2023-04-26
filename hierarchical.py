@@ -41,3 +41,7 @@ ax.scatter(features[:, 0], features[:, 1], c=labels)
 # plt.box(False)
 # plt.show()
 st.pyplot(fig)
+
+st.write("Hierarchical clustering is a process of grouping similar data points together based on their distance from each other. The slider allows the user to change the number of clusters and see how the data is grouped at each step of the clustering process.")
+st.write("As the user changes the slider, the number of clusters changes, and the voronoi diagram updates to show how the data is grouped based on the new number of clusters. The voronoi diagram is a visual representation of the clusters, where each point in the diagram represents a data point, and the color of the point represents which cluster it belongs to. As the slider is moved, the colors of the points change to reflect the new cluster assignments.")
+st.write("This tool can be useful for exploring unsupervised data and understanding how different clustering algorithms group data points together. It allows users to visualize the clustering process step by step and gain insights into how the algorithm is grouping the data.")
